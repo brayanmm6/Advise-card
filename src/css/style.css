@@ -1,0 +1,73 @@
+:root{
+    --text-color: hsl(193, 38%, 86%);
+    --advice-dice-color: hsl(150, 100%, 66%);
+    --advice-card-color: hsl(217, 19%, 24%);
+    --background-color: hsl(218, 23%, 16%);
+}
+
+@import url(https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap);
+
+*{
+    font-family: 'Manrope', sans-serif;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--advice-card-color);
+    border-radius: 10px;
+    gap: 30px;
+    padding: 30px;
+    margin: 10px;
+}
+
+.pause{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    gap: 10px;
+}
+
+.pause hr{
+    width: 100%;
+}
+
+.advise-number{
+    color: var(--advice-dice-color);
+}
+
+.advise-text{
+    margin-top: 25px;
+    color: var(--text-color);
+    font-size: 22px;
+}
+
+.dice-container{
+    align-self: center;
+    position: relative;
+    right: 25px;
+    top: 5px;
+}
+
+.dice{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--advice-dice-color);
+    border-radius: 50%;
+    font-size: 20px;
+}
