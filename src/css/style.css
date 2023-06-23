@@ -9,6 +9,7 @@
 
 *{
     font-family: 'Manrope', sans-serif;
+    font-weight: 800;
 }
 
 main{
@@ -23,7 +24,7 @@ main{
     flex-direction: column;
     text-align: center;
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
     background-color: var(--advice-card-color);
     border-radius: 10px;
     gap: 30px;
@@ -45,6 +46,8 @@ main{
 
 .advise-number{
     color: var(--advice-dice-color);
+    text-transform: uppercase;
+    letter-spacing: 5px;
 }
 
 .advise-text{
@@ -54,14 +57,14 @@ main{
 }
 
 .dice-container{
-    align-self: center;
     position: relative;
-    right: 25px;
-    top: 5px;
+    align-self: center;
+    transform: translateY(50%);
 }
 
 .dice{
     position: absolute;
+    transform: translateX(-50%);
     height: 50px;
     width: 50px;
     display: flex;
@@ -70,4 +73,8 @@ main{
     background-color: var(--advice-dice-color);
     border-radius: 50%;
     font-size: 20px;
+}
+
+.dice:hover{
+    cursor: pointer;
 }

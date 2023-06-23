@@ -1,0 +1,9 @@
+@media(max-width:768px){
+    .card-container{
+        padding-inline: 20px;
+    }
+
+    .card-container .advise-text{
+        font-size: 26px;
+    }
+}
