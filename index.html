@@ -6,13 +6,33 @@
     <link rel="stylesheet" href="./src/css/style.css">
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/responsive.css">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./src/css/all.min.css">
 
 </head>
 
 <body>
+    <header>
+        <input type="checkbox" name="night-mode-button" id="night-mode-button">
+        <label for="night-mode-button">
+            <div class="button-container">
+                <div class="button-ball"></div>
+            </div>
+        </label>
+    </header>
+
     <main>
+        <aside class="aside-left">
+            <input type="checkbox" name="show-aside" id="show-aside" checked>
+            <label for="show-aside">
+                <span><i class="eye-icon"></i></span>
+                <div class="button-container">
+                    <div class="button-ball"></div>
+                </div>
+            </label>
+
+            <div class="aside-left-content"></div>
+        </aside>
+
         <div class="card-container">
             <ul class="main-informations">
                 <li class="advise-number"></li>

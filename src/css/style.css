@@ -2,7 +2,8 @@
     --text-color: hsl(193, 38%, 86%);
     --advice-dice-color: hsl(150, 100%, 66%);
     --advice-card-color: hsl(217, 19%, 24%);
-    --background-color: hsl(218, 23%, 16%);
+    --background-color-darkmode: hsl(218, 23%, 16%);
+    --background-color-lightmode: #fafbfd;
 }
 
 @import url(https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap);
@@ -12,11 +13,16 @@
     font-weight: 800;
 }
 
+body{
+    background-color: var(--background-color-lightmode);
+    transition: 0.4s ease-in-out;
+}
+
 main{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--background-color);
+    width: 100vw;
 }
 
 .card-container{
@@ -77,4 +83,92 @@ main{
 
 .dice:hover{
     cursor: pointer;
+}
+
+/*//////////////////////////////////////////////////////
+         HEADER
+//////////////////////////////////////////////////////*/
+
+header{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    position: fixed;
+}
+
+label .button-container{
+    width: 50px;
+    height: 20px;
+    background-color: var(--advice-card-color);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 1px;
+}
+
+label .button-ball{
+    width: 18px;
+    height: 18px;
+    background-color: var(--advice-dice-color);
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+#night-mode-button,
+#show-aside{
+    display: none;
+}
+
+#night-mode-button:checked ~ label .button-ball, 
+#show-aside:checked ~ label .button-ball{
+    translate: 30px;
+}
+
+.night-mode-background{
+    background-color: var(--background-color-darkmode);
+}
+
+/*//////////////////////////////////////////////////////
+                    ASIDE
+//////////////////////////////////////////////////////*/
+
+.aside-left{
+    position: absolute;
+    max-width: 250px;
+    max-height: 400px;
+    left: 50px;
+    color: var(--text-color);
+    background-color: rgba(0, 0, 20, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.aside-left-content p{
+    border-bottom: 0.5px solid var(--advice-dice-color);
+    padding-bottom: 10px;
+}
+
+#show-aside:not(:checked) ~ .aside-left-content{
+    display: none;
+}
+
+aside label{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-button,
+::-webkit-scrollbar{
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--advice-dice-color);
+    border-radius: 10px;
 }

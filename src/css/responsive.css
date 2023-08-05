@@ -1,9 +1,27 @@
-@media(max-width:768px){
+@media(max-width:1080px){
     .card-container{
         padding-inline: 20px;
     }
 
     .card-container .advise-text{
         font-size: 26px;
+    }
+
+    header{
+        position: static;
+    }
+
+    main{
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        gap: 20px;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .aside-left{
+        position: static;
+        max-width: 100%;
+        align-self: flex-start;
     }
 }
